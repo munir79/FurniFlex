@@ -1,0 +1,75 @@
+[
+    {
+     "id": 1,
+     "logo": "https://i.postimg.cc/Gm1NTs6y/image-147.png",
+     "chair_name": "Recliner Chair Wood",
+     "real_price": 350,
+     "off_price": 299,
+     "dicount": "30%",
+     "chair_categories": "Rocking Chair",
+     
+     "chair_description": " It has a backrest that can be tilted back, and often a footrest extended"
+     
+   },
+    {
+     "id": 2,
+     "logo": "https://i.postimg.cc/t4yS4GVd/image-146.png",
+     "chair_name": "Timber Ride Padded",
+     "real_price": 75,
+     "off_price": 59,
+     "dicount": "30%",
+     "chair_categories": "Rocking Chair",
+     
+     "chair_description": " High Back Rocking Side Pocket Portable Folding Outdoor Camping Chairs "
+     
+   },
+    {
+     "id": 3,
+     "logo": "https://i.postimg.cc/q7DjwtDQ/Image.png",
+     "chair_name": "Colored Wooden Chair",
+     "real_price": 350,
+     "off_price": 299,
+     "dicount": "30%",
+     "chair_categories": "Rocking Chair",
+     
+     "chair_description": " It has a backrest that can be tilted back, and often a footrest extended"
+     
+   },
+    {
+     "id": 4,
+     "logo": "https://i.postimg.cc/wML29wqb/image-125-removebg-preview-1.png",
+     "chair_name": "Blank Bamboo Wicker",
+     "real_price": 350,
+     "off_price": 299,
+     "dicount": "30%",
+     "chair_categories": "Rocking Chair",
+     
+     "chair_description": " Lightweight, easy to clean, sturdy, safe and stable. Non-slip legs"
+     
+   },
+    {
+     "id": 5,
+     "logo": "https://i.postimg.cc/VsCD9kqB/Image-1.png",
+     "chair_name": "Isolated Wooden Rock",
+     "real_price": 400,
+     "off_price": 165,
+     "dicount": "30%",
+     "chair_categories": "Rocking Chair",
+     
+     "chair_description": " It has a backrest that can be tilted back, and often a footrest extended"
+     
+   },
+    {
+     "id": 6,
+     "logo": "https://i.postimg.cc/m23jqp6P/rocking-chair-with-padded-seat-1.png",
+     "chair_name": "Minimal Empty Rocking",
+     "real_price": 350,
+     "off_price": 299,
+     "dicount": "30%",
+     "chair_categories": "Rocking Chair",
+     
+     "chair_description": " A seat, especially for one person, usually having four legs for support."
+     
+   }
+   
+ ]
