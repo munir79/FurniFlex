@@ -1,5 +1,7 @@
 
 import '../../Style/chairCard.css'
+import { FaEuroSign } from "react-icons/fa";
+import { TbShoppingBag } from "react-icons/tb";
 const ChairCard = ({chair}) => {
     const {logo,chair_name,real_price,off_price,dicount,chair_categories,chair_description}=chair;
     return (
@@ -28,12 +30,16 @@ const ChairCard = ({chair}) => {
   <div className="card-body">
    <div>
    <h2 className='text-[18px] font-bold'>{chair_name}</h2>
+   <div className='inline-flex text-center justify-evenly gap-14 mt-5'>
+    <p className='font-bold text-xl flex'> <FaEuroSign className='text-center mt-1' />{off_price} </p> <p className='line-through flex text-xl font-semibold text-[#ABABAB]'><FaEuroSign className='text-center line-through mt-1' />{real_price}</p> 
+    <p className='text-[#B92E2E] text-xl font-bold'>{dicount}</p></div> 
    </div>
     <p>{chair_description}</p>
 
+       
 
     <div className="card-actions ">
-    <button className="btn btn-active w-full btn-neutral">Add to Cart</button>
+    <button className="btn btn-active w-full btn-neutral"> <TbShoppingBag />Add to Cart</button>
     </div>
   </div>
 </div>

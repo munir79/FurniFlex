@@ -1,14 +1,42 @@
 
+import { Link } from 'react-router-dom';
 import logopic from '../assets/Logo/FurniFlex.png'
 import logo from '../assets/Logo/icon.png'
 const NavBar = () => {
     return (
         <div className="navbar bg-base-100">
-  <div className="flex-1 gap-1">
+
+ <div className="navbar-start flex-1 gap-1">
     <img src={logo} alt="" />
     <img src={logopic} alt="" />
+
+    
   </div>
-  <div className="flex-none">
+ 
+
+
+
+{/* navbar center  */}
+
+
+
+<div className="navbar-center    lg:flex">
+    <ul className="menu menu-horizontal px-1">
+     <Link to='/'> <li><a>Home </a></li></Link>
+     
+      <Link to='/product'><li><a>Product</a></li></Link>
+      <Link to='/categorey'><li><a>Categorey</a></li></Link>
+      <Link to='/custom'><li><a>Custom</a></li></Link>
+      <Link to='/blog'><li><a>Blog</a></li></Link>
+    </ul>
+  </div>
+
+
+
+{/* navBar End */}
+
+
+  <div className=" navbar-end flex-none">
     <div className="dropdown dropdown-end">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
         <div className="indicator">
@@ -50,14 +78,9 @@ const NavBar = () => {
       <ul
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-        <li>
-          <a className="justify-between">
-            Profile
-            <span className="badge">New</span>
-          </a>
-        </li>
-        <li><a>Settings</a></li>
-        <li><a>Logout</a></li>
+        <Link to='/signup'><li>SignUp</li></Link>
+        <Link to='/login'><li><a>Login</a></li></Link>
+        <Link to='/logout'>LogOut</Link>
       </ul>
     </div>
   </div>
