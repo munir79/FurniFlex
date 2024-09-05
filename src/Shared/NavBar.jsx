@@ -1,8 +1,29 @@
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logopic from '../assets/Logo/FurniFlex.png'
 import logo from '../assets/Logo/icon.png'
+import { useContext } from 'react';
+import { AuthContext } from '../Context/AuthProvider';
+import Swal from 'sweetalert2';
 const NavBar = () => {
+  const {user,Logout}=useContext(AuthContext);
+  const NaviGate=useNavigate();
+  const handleLogout=()=>{
+    Logout()
+    .then(()=>{
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "LogOut Sucessfully",
+        showConfirmButton: false,
+        timer: 1500
+      });
+      NaviGate('/');
+    })
+    .catch(error=>{
+      console.log(error);
+    })
+  }
     return (
         <div className="navbar bg-base-100">
 
@@ -28,6 +49,7 @@ const NavBar = () => {
       <Link to='/categorey'><li><a>Categorey</a></li></Link>
       <Link to='/custom'><li><a>Custom</a></li></Link>
       <Link to='/blog'><li><a>Blog</a></li></Link>
+      <p> {user&& user.email} </p>
     </ul>
   </div>
 
@@ -80,7 +102,7 @@ const NavBar = () => {
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
         <Link to='/signup'><li>SignUp</li></Link>
         <Link to='/login'><li><a>Login</a></li></Link>
-        <Link to='/logout'>LogOut</Link>
+        <Link onClick={()=> handleLogout()} to='/logout'>LogOut</Link>
       </ul>
     </div>
   </div>

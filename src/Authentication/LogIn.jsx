@@ -84,7 +84,7 @@ const LogIn = () => {
           <button type='submit' className="btn m-3 mt-5 w-full md:w-[278px] h-[52px] gap-2 btn-active btn-ghost"> <FcGoogle className='w-[20px] h-[23px]' />SignUp with Google</button>
           <button type='submit' className="btn m-3  mt-5 w-full md:w-[278px] h-[52px] btn-active btn-ghost"> <GrApple className='w-[20px] h-[23px]' />SignUp with Apple</button>
         </div>
-        <p className='text-center font-medium'>Have an account ?<a href=""><Link className='text-blue-500' to='/login'>sign in</Link> </a> </p>
+        <p className='text-center font-medium'>New User ?<a href=""><Link className='text-blue-500' to='/signup'>signup</Link> </a> </p>
       </div>
     );
 };
