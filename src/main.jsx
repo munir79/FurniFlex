@@ -21,6 +21,7 @@ import {
   useQuery,
 } from '@tanstack/react-query'
 import ShopingCart from './ShopingCart/ShopingCart.jsx';
+import PrivateRoute from './PrivateRoute/PrivateRoute.jsx';
 
 const queryClient = new QueryClient();
 const router = createBrowserRouter([
@@ -58,7 +59,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/shoap',
-        element:<ShopingCart></ShopingCart>
+        element:<PrivateRoute><ShopingCart></ShopingCart></PrivateRoute>
       }
     ]
   },

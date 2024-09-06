@@ -55,7 +55,7 @@ const NavBar = () => {
       <Link to='/categorey'><li><a>Categorey</a></li></Link>
       <Link to='/custom'><li><a>Custom</a></li></Link>
       <Link to='/blog'><li><a>Blog</a></li></Link>
-      <p> {user&& user.email} </p>
+    
     </ul>
   </div>
 
@@ -97,9 +97,12 @@ const NavBar = () => {
       <ul
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-        <Link to='/signup'><li>SignUp</li></Link>
+            <p>  {user&& user.email} </p>
+   <div className='mt-4 font-bold'>
+   <Link  to='/signup'><li>SignUp</li></Link>
         <Link to='/login'><li><a>Login</a></li></Link>
         <Link onClick={()=> handleLogout()} to='/logout'>LogOut</Link>
+   </div>
       </ul>
     </div>
   </div>

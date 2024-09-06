@@ -5,12 +5,19 @@ import ChairCard from "./ChairCard";
 const Home = () => {
     const [chair,setChair]=useState([]);
     const [filterchair,setChairFilter]=useState([]);
+
+  
     useEffect(()=>{
         fetch('http://localhost:5000/chair')
         .then(res=>res.json())
-        .then(data=>setChair(data));
+        .then(data=> {
+            setChair(data);
+            setChairFilter(data);
+            setTotalPages(data.totalPages);
+        });
     },[])
       
+   
       
 
     const handleFilter=filter=>{
@@ -47,8 +54,15 @@ const Home = () => {
                 filterchair.map(chair=><ChairCard key={chair.id} chair={chair}></ChairCard>)
              }
            </div>
+
+         
         </div>
     );
 };
 
 export default Home;
+
+
+
+
+
