@@ -67,7 +67,7 @@ const Footer = () => {
         
     //   </footer>
 
-    <footer className="bg-[#0E0E0E]  text-[#81859F] ">
+    <footer className="bg-[#0E0E0E] mt-16 mb-0 text-[#81859F] ">
     <div className="container mx-auto px-4 py-8">
       <div className="flex justify-evenly">
         {/* Logo */}

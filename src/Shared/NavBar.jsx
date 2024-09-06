@@ -1,5 +1,6 @@
 
 import { Link, useNavigate } from 'react-router-dom';
+
 import logopic from '../assets/Logo/FurniFlex.png'
 import logo from '../assets/Logo/icon.png'
 import { useContext } from 'react';
@@ -11,6 +12,7 @@ const NavBar = () => {
   const handleLogout=()=>{
     Logout()
     .then(()=>{
+      
       Swal.fire({
         position: "top-end",
         icon: "success",

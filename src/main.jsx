@@ -15,7 +15,13 @@ import Blog from './Page/Blog/Blog.jsx';
 import SignUp from './Authentication/SignUp.jsx';
 import LogIn from './Authentication/LogIn.jsx';
 import AuthProvider from './Context/AuthProvider.jsx';
+import {
+  QueryClient,
+  QueryClientProvider,
+  useQuery,
+} from '@tanstack/react-query'
 
+const queryClient = new QueryClient();
 const router = createBrowserRouter([
   {
     path: "/",
@@ -55,11 +61,13 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
    <AuthProvider>
-   <div className='max-w-7xl mx-auto'>
+  <QueryClientProvider client={queryClient}>
+  <div className='max-w-7xl mx-auto'>
    <RouterProvider router={router}>
     <App />
     </RouterProvider>
    </div>
+  </QueryClientProvider>
    </AuthProvider>
   </StrictMode>,
 )

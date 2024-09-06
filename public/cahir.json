@@ -1,6 +1,5 @@
 [
     {
-     "id": 1,
      "logo": "https://i.postimg.cc/Gm1NTs6y/image-147.png",
      "chair_name": "Recliner Chair Wood",
      "real_price": 350,
@@ -12,7 +11,6 @@
      
    },
     {
-     "id": 2,
      "logo": "https://i.postimg.cc/t4yS4GVd/image-146.png",
      "chair_name": "Timber Ride Padded",
      "real_price": 75,
@@ -24,7 +22,6 @@
      
    },
     {
-     "id": 3,
      "logo": "https://i.postimg.cc/q7DjwtDQ/Image.png",
      "chair_name": "Colored Wooden Chair",
      "real_price": 350,
@@ -36,7 +33,6 @@
      
    },
     {
-     "id": 4,
      "logo": "https://i.postimg.cc/wML29wqb/image-125-removebg-preview-1.png",
      "chair_name": "Blank Bamboo Wicker",
      "real_price": 350,
@@ -48,7 +44,6 @@
      
    },
     {
-     "id": 5,
      "logo": "https://i.postimg.cc/VsCD9kqB/Image-1.png",
      "chair_name": "Isolated Wooden Rock",
      "real_price": 400,
@@ -60,7 +55,6 @@
      
    },
     {
-     "id": 6,
      "logo": "https://i.postimg.cc/m23jqp6P/rocking-chair-with-padded-seat-1.png",
      "chair_name": "Minimal Empty Rocking",
      "real_price": 350,
@@ -72,7 +66,6 @@
      
    },
     {
-     "id": 6,
      "logo": "https://i.postimg.cc/m23jqp6P/rocking-chair-with-padded-seat-1.png",
      "chair_name": "Minimal Empty Rocking",
      "real_price": 350,
@@ -82,6 +75,132 @@
      
      "chair_description": " A seat, especially for one person, usually having four legs for support."
      
-   }
+   },
+    {
+     "logo": "https://i.postimg.cc/fLTS1M6s/slide1.jpg",
+     "chair_name": "Timber Ride Padded",
+     "real_price": 450,
+     "off_price": 399,
+     "dicount": "30% OFF",
+     "chair_categories": "sidechair",
+     
+     "chair_description": " A seat, especially for one person, usually having four legs for support."
+     
+   },
+    {
+     "logo": "https://i.postimg.cc/vZr1B1yM/l2.jpg",
+     "chair_name": "Shop Retro Accent Arm Chair",
+     "real_price": 350,
+     "off_price": 299,
+     "dicount": "30% OFF",
+     "chair_categories": "LoungeChair",
+     
+     "chair_description": " A seat, especially for one person, usually having four legs for support."
+     
+   },
+    {
+     "logo": "https://i.postimg.cc/F1tRFvn7/l3.jpg",
+     "chair_name": "Eames Lounge Chair",
+     "real_price": 650,
+     "off_price": 499,
+     "dicount": "30% OFF",
+     "chair_categories": "LoungeChair",
+     
+     "chair_description": "A classic mid-century modern design, this chair combines luxury"
+     
+   },
+   
+    {
+
+     "logo": "https://i.postimg.cc/Vv0vcvgx/l4.jpg",
+     "chair_name": "Chaise Longue",
+     "real_price": 250,
+     "off_price": 199,
+     "dicount": "30% OFF",
+     "chair_categories": "LoungeChair",
+     
+     "chair_description": "A traditional elongated chair designed for reclining"
+     
+   },
+    {
+
+     "logo": "https://i.postimg.cc/59XStmRV/l5.jpg",
+     "chair_name": "Adirondack Chair",
+     "real_price": 550,
+     "off_price": 399,
+     "dicount": "30% OFF",
+     "chair_categories": "LoungeChair",
+     
+     "chair_description": "A traditional elongated chair designed for reclining"
+     
+   },
+    {
+
+     "logo": "https://i.postimg.cc/xC487MvG/l6.avif",
+     "chair_name": "Eames Lounge Chairr",
+     "real_price": 450,
+     "off_price": 299,
+     "dicount": "30% OFF",
+     "chair_categories": "LoungeChair",
+     
+     "chair_description": "A lightweight lounge chair with a simple frame, typically made of wood or metal"
+     
+   },
+   {
+    "logo": "https://i.postimg.cc/fLTS1M6s/slide1.jpg",
+    "chair_name": "Chaise Longue",
+    "real_price": 250,
+    "off_price": 199,
+    "dicount": "30% OFF",
+    "chair_categories": "LoungeChair",
+    
+    "chair_description": "A traditional elongated chair designed for reclining"
+    
+  },
+  {
+    "logo": "https://i.postimg.cc/hjr6P1yx/sl4.jpg",
+    "chair_name": "Speaker Deck",
+    "real_price": 450,
+    "off_price": 399,
+    "dicount": "30% OFF",
+    "chair_categories": "sidechair",
+    
+    "chair_description": "A lightweight slide chair with a simple frame, typically made of wood or metal"
+    
+  },
+  {
+    "logo": "https://i.postimg.cc/mkpn72Gg/sl5.jpg",
+    "chair_name": "Slidebean",
+    "real_price": 250,
+    "off_price": 199,
+    "dicount": "30% OFF",
+    "chair_categories": "sidechair",
+    
+    "chair_description": "A lightweight slide chair with a simple frame, typically made of wood or metal"
+    
+  },
+  {
+    "logo": "https://i.postimg.cc/NGdS3brv/sl6.jpg",
+    "chair_name": "Slidebean",
+    "real_price": 250,
+    "off_price": 199,
+    "dicount": "30% OFF",
+    "chair_categories": "sidechair",
+    
+    "chair_description": "A lightweight slide chair with a simple frame, typically made of wood or metal"
+    
+  },
+  {
+    "logo": "https://i.postimg.cc/Gm1NTs6y/image-147.png",
+    "chair_name": "Recliner Chair Wood",
+    "real_price": 350,
+    "off_price": 299,
+    "dicount": "30% OFF",
+    "chair_categories": "sidechair",
+    
+    "chair_description": " It has a backrest that can be tilted back, and often a footrest extended"
+    
+  }
+
    
  ]
