@@ -7,6 +7,7 @@ import { AuthContext } from '../../Context/AuthProvider';
 import UseAxiosSecure from '../../Hooks/UseAxiosSecure';
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
+import UseCarts from '../../Hooks/UseCarts';
 const ChairCard = ({chair}) => {
     const {_id,logo,chair_name,real_price,off_price,dicount,chair_categories,chair_description}=chair;
 
@@ -15,13 +16,14 @@ const {user}=useContext(AuthContext);
 
 const AxiosSecure=UseAxiosSecure();
 
-
+const [,refetch]=UseCarts();
 const handleAddToCart=(chair)=>{
 console.log(chair);
 if(user && user.email){
   const Order={
     menuId:_id,
     logo,
+    email:user.email,
     chair_name,
     real_price,
     off_price,
@@ -40,6 +42,7 @@ if(user && user.email){
         showConfirmButton: false,
         timer: 1500
       });
+      refetch();
      
     }
   })
