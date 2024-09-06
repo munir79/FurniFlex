@@ -35,12 +35,19 @@ if(user && user.email){
   .then(res=>{
     console.log(res.data);
     if(res.data.insertedId ){
+      // Swal.fire({
+      //   position: "top-end",
+      //   icon: "success",
+      //   title: "Order Sucessfully",
+      //   showConfirmButton: false,
+      //   timer: 1500
+      // });
+
       Swal.fire({
-        position: "top-end",
         icon: "success",
-        title: "Order Sucessfully",
-        showConfirmButton: false,
-        timer: 1500
+        title: "OoW...",
+        text: "Your Order Sucessfully",
+        footer: 'Thanks for Order '
       });
       refetch();
      

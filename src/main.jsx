@@ -20,6 +20,7 @@ import {
   QueryClientProvider,
   useQuery,
 } from '@tanstack/react-query'
+import ShopingCart from './ShopingCart/ShopingCart.jsx';
 
 const queryClient = new QueryClient();
 const router = createBrowserRouter([
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
       {
         path:'/login',
         element:<LogIn></LogIn>
+      },
+      {
+        path:'/shoap',
+        element:<ShopingCart></ShopingCart>
       }
     ]
   },
