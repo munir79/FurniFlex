@@ -1,9 +1,10 @@
 import UseCarts from "../Hooks/UseCarts";
 import Order from "./Order";
 
-
+import { FaEuroSign } from "react-icons/fa";
 const ShopingCart = () => {
     const [cart]=UseCarts();
+    const totalPrice=cart.reduce((total,current)=>total+current.off_price ,0);
     console.log(cart);
     return (
         <div className="flex gap-10 ">
@@ -24,11 +25,21 @@ const ShopingCart = () => {
 
         <div className="border-2 mt-5 p-3 h-[213px]">
         <div className="ml-3 mt-2">
-        <h3 className="text-xl">Subtotal: </h3>
-        <h3 className="text-xl" >Subtotal: </h3>
-        <h3 className="text-xl" >Estimated Tax: </h3>
+        <div className="flex  justify-between">
+        <h3 className="text-xl">Subtotal:</h3>  <div className="flex "> <FaEuroSign className="mt-1" /> <p className=""> {totalPrice}</p></div> 
+        </div>
+        <div className="flex  justify-between">
+        <h3 className="text-xl">Shipping:</h3>  <div className="flex "> <p className="">Free </p></div> 
+        </div>
+        <div className="flex  justify-between">
+        <h3 className="text-xl">Estimated Tax:</h3>  <div className="flex "> <FaEuroSign className="mt-1" /> <p className=""> -</p></div> 
+        </div>
+       
+   
       <div className="mt-5">
-      <h4 className="text-2xl font-semibold">Total: </h4>
+      <div className="flex  justify-between">
+        <h3 className="text-xl">Total:</h3>  <div className="flex "> <FaEuroSign className="mt-1" /> <p className=""> {totalPrice}</p></div> 
+        </div>
       </div>
         </div>
         
