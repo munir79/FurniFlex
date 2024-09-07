@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+
 import { FaEuroSign } from "react-icons/fa";
 import Swal from "sweetalert2";
 import UseAxiosSecure from "../Hooks/UseAxiosSecure";
@@ -10,18 +10,18 @@ const Order = ({cart}) => {
     const{chair_name,logo,off_price,_id}=cart;
     console.log(cart);
   const AxiosSecure=UseAxiosSecure();
-    const [count, setCount] = useState(0);
-    const handledec=()=>{
-        if(count>1){
-            setCount(prev=>prev-1);
-        }
-    }
+    // const [count, setCount] = useState(0);
+    // const handledec=()=>{
+    //     if(count>1){
+    //         setCount(prev=>prev-1);
+    //     }
+    // }
 
-    const handleInc=()=>{
-        if(count<10){
-            setCount(pre=>pre+1);
-        }
-    }
+    // const handleInc=()=>{
+    //     if(count<10){
+    //         setCount(pre=>pre+1);
+    //     }
+    // }
 
 const handleDelete=(id)=>{
     console.log(" delete with",id);
@@ -61,7 +61,7 @@ const handleDelete=(id)=>{
 
             <div className="mt-20">
             <div className="flex items-center justify-center ">
-      <div className="bg-gray-100  rounded-lg shadow-md">
+      {/* <div className="bg-gray-100  rounded-lg shadow-md">
         <div className="flex justify-between items-center space-x-4">
           <button 
             className=" text-white px-4 py-2 rounded"
@@ -77,7 +77,7 @@ const handleDelete=(id)=>{
             <h2 className="text-black text-xl">+</h2>
           </button>
         </div>
-      </div>
+      </div> */}
     </div>
             </div>
            <img src={logo} alt="" />

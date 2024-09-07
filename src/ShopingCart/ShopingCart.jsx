@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import UseCarts from "../Hooks/UseCarts";
 import Order from "./Order";
 
@@ -45,7 +46,11 @@ const ShopingCart = () => {
         
         </div>
            
-        <button className="btn mt-4 btn-active text-xl font-medium w-full btn-neutral">Go to Checkout</button>
+      {
+        cart.length ? <Link to='/payment'> <button  className="btn mt-4 btn-active text-xl font-medium w-full btn-neutral">Go to Checkout</button></Link> :
+        <button disabled className="btn mt-4 btn-active text-xl font-medium w-full btn-neutral">Go to Checkout</button>
+
+      }
           </div>
 
         </div>
