@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../Context/AuthProvider";
 
@@ -9,6 +9,7 @@ import { GrApple } from "react-icons/gr";
 const LogIn = () => {
     const naviGate=useNavigate();
     const {Login}=useContext(AuthContext);
+    const [errorMessage, setErrorMessage] = useState("");
   const handleLogin=event=>{
     event.preventDefault();
     const form=event.target;
@@ -29,9 +30,11 @@ const LogIn = () => {
       });
       naviGate('/');
       form.reset(" ");
+      setErrorMessage(""); 
     })
     .catch(error=>{
       console.log(error);
+      setErrorMessage("Incorrect password or email. Please try again.");
     })
 
     console.log(email,password);
@@ -65,7 +68,11 @@ const LogIn = () => {
               </label>
             </div>
             <button type='submit' className="btn m-3  mt-2 w-[522px] btn-active btn-neutral">SignIn</button>
+            {errorMessage && (
+                    <p className="text-red-500 text-center mt-3">{errorMessage}</p>
+                )}
           </form>
+
   
           <div className="flex items-center justify-center my-4">
             <div className="border-t border-gray-300 flex-grow"></div>
