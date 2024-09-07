@@ -13,7 +13,7 @@ const Home = () => {
 
   
     useEffect(()=>{
-        fetch(`http://localhost:5000/chair?page=${currentpage}&size=${itemsperPage}`)
+        fetch(`https://furniflex-server-rust.vercel.app/chair?page=${currentpage}&size=${itemsperPage}`)
         .then(res=>res.json())
         .then(data=> {
             setChair(data);

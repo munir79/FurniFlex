@@ -47,7 +47,7 @@ const ShopingCart = () => {
         </div>
            
       {
-        cart.length ? <Link to='/payment'> <button  className="btn mt-4 btn-active text-xl font-medium w-full btn-neutral">Go to Checkout</button></Link> :
+        cart.length ?  <button  className="btn mt-4 btn-active text-xl font-medium w-full btn-neutral">Go to Checkout</button> :
         <button disabled className="btn mt-4 btn-active text-xl font-medium w-full btn-neutral">Go to Checkout</button>
 
       }

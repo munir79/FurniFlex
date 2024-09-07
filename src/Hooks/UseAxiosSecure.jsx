@@ -3,7 +3,7 @@ import axios from "axios";
 
 
 const AxiosSecure = axios.create({
-    baseURL: 'http://localhost:5000',
+    baseURL: 'https://furniflex-server-rust.vercel.app/',
     
   });
 const UseAxiosSecure = () => {
