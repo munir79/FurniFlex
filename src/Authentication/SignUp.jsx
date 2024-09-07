@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom';
 
 import { FcGoogle } from "react-icons/fc";
 import { GrApple } from "react-icons/gr";
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { AuthContext } from '../Context/AuthProvider';
 import Swal from 'sweetalert2';
 const SignUp = () => {
 const {CreateUser}=useContext(AuthContext);
+const [errorMessage, setErrorMessage] = useState("");
   const handleRegistration=event=>{
     event.preventDefault();
     const form=event.target;
@@ -15,6 +16,11 @@ const {CreateUser}=useContext(AuthContext);
     const lastName=form.lastname.value;
     const email=form.email.value;
     const password=form.password.value;
+
+    if (password.length < 6) {
+      setErrorMessage(" Password must be at least 6 characters.");
+      return; // Stop the form submission
+    }
 
     CreateUser(email,password)
     .then(result=>{
@@ -28,6 +34,7 @@ const {CreateUser}=useContext(AuthContext);
         timer: 1500
       });
       form.reset(" ");
+      setErrorMessage("");
     })
     .catch(error=>{
       console.log(error);
@@ -65,6 +72,7 @@ const {CreateUser}=useContext(AuthContext);
             <input type="password" name='password' className="grow" placeholder=" " />
           </label>
 
+          {errorMessage && <p className='text-red-500 text-center mt-2'>{errorMessage}</p>}
 
           <div className=" m-4 gap-1 mt-5">
             <label className="cursor-pointer space-x-2  ">
