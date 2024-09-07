@@ -1,21 +1,26 @@
 import { useEffect, useState } from "react";
 import ChairCard from "./ChairCard";
+import '../../Style/Pagination.css'
+import { FaAngleLeft } from "react-icons/fa6";
+import { FaAngleRight } from "react-icons/fa";
 
 
 const Home = () => {
     const [chair,setChair]=useState([]);
     const [filterchair,setChairFilter]=useState([]);
+    const [itemsperPage,setItemPerpage]=useState(10);
+    const [currentpage,setCurrentPage]=useState(0);
 
   
     useEffect(()=>{
-        fetch('http://localhost:5000/chair')
+        fetch(`http://localhost:5000/chair?page=${currentpage}&size=${itemsperPage}`)
         .then(res=>res.json())
         .then(data=> {
             setChair(data);
             setChairFilter(data);
-            setTotalPages(data.totalPages);
+            
         });
-    },[])
+    },[currentpage,itemsperPage])
       
    
       
@@ -34,9 +39,37 @@ const Home = () => {
             setChairFilter(sidechair);
         }
     }
+
+    // pagination
+   
+    const handleItemPerpageChange=e=>{
+        
+        const val=parseInt(e.target.value);
+        console.log(val);
+        setItemPerpage(val);
+        setCurrentPage(0);
+    }
+
+    const handleprev=()=>{
+        if(currentpage>0){
+            setCurrentPage(currentpage-1);
+        }
+    }
+
+    const handleNext=()=>{
+        if(currentpage<pages.length){
+            setCurrentPage(currentpage+1)
+        }
+    }
+
+    // const itemperPage=10;
+    const totalChair=chair.length;
+    const NumberOfPage=Math.ceil(totalChair/itemsperPage);
+    const pages=[...Array(NumberOfPage).keys()];
     
     return (
-        <div className=" flex flex-col md:flex-row">
+       <div>
+         <div className=" flex flex-col md:flex-row">
            <div className=" w-1/4">
             <div className="dropdown dropdown-open">
   
@@ -57,6 +90,26 @@ const Home = () => {
 
          
         </div>
+        <h1 className="text-center"> current page :{currentpage} </h1>
+      <div className=" pagination ">
+          <button onClick={handleprev} > <FaAngleLeft /> </button>
+        {
+            pages.map(page=><button 
+                
+                onClick={()=>setCurrentPage(page)}
+                className={ currentpage === page && 'selected' } 
+                key={page}>  {page} </button>)
+        }
+        <button onClick={handleNext} ><FaAngleRight /></button>
+        <select className="space-x-5" value={itemsperPage} onChange={handleItemPerpageChange} name="" id="" >
+            <option value="1">1</option>
+            <option value="2">2</option>
+            
+           
+
+        </select>
+      </div>
+       </div>
     );
 };
 

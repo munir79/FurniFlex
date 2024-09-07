@@ -27,7 +27,7 @@ const handleDelete=(id)=>{
     console.log(" delete with",id);
     Swal.fire({
         title: "Are you sure to Delete this Order?",
-        text: "You won't be able to revert this!",
+        text: " to delete ,click the Yes button ",
         icon: "warning",
         showCancelButton: true,
         confirmButtonColor: "#3085d6",

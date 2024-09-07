@@ -58,8 +58,8 @@ if(user && user.email){
 
 else{
   Swal.fire({
-    title: "you are not log in",
-    text: "You won't be able to revert this!",
+    title: "ops..sorry sir you are not logged in this website",
+    text: "to order, firstly you have to log in here",
     icon: "warning",
     showCancelButton: true,
     confirmButtonColor: "#3085d6",
